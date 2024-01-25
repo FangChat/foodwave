@@ -9,7 +9,7 @@ function App() {
       </div>
 
       <div className='flex bg-[#333333] text-white blur-[2px] hover:blur-[0px]'>
-        <p>Hello</p>
+        <p>Bye</p>
       </div>
     </div>
   );
