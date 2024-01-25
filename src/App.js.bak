@@ -1,0 +1,94 @@
+import './App.css';
+import { Button, Dialog, DialogTitle, DialogContent, DialogActions, DialogContentText, AppBar, Toolbar, Box, Link} from '@mui/material';
+import { ExitToAppRounded } from '@mui/icons-material';
+import { Fade } from '@mui/material';
+import { forwardRef, useState } from 'react';
+
+const FadeAnimation = forwardRef(function FadeAnimation(props, ref){
+    return <Fade ref={ref} {...props} timeout={{enter: 500, exit:500}}/>
+});
+
+function App() {
+  const [signInDialogOpen, setSignInDialogOpen] = useState(false);
+
+  const handleSignInDialog = () => {
+    setSignInDialogOpen(true);
+  }
+
+  const closeSignInDialog = () => {
+    setSignInDialogOpen(false);
+  }
+
+  const pages = ['Contact','Workshops','Pro Shows','Events','About']
+
+  return (
+    <div>
+      <Box>
+      <AppBar position="sticky" style={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}>
+        <Toolbar className='navbar'>
+          <Box sx={{ flexGrow: 1, alignItems: 'center' }}>
+            {
+              pages.map((page) => (
+                <Link href={`/${page}`} key={page} className='navlink' style={{color: 'white', marginRight: '30px', textDecorationLine: 'none', fontWeight: 'bold'}} sx={{'&:active': { backgroundColor: 'white'} }}>
+                  {page}
+                </Link>
+              ))
+            }
+          </Box>
+          <Box className='signInButton'>
+            <Button size="large" startIcon={<ExitToAppRounded />} style={{ color: 'white', fontWeight: 'bold' }} onClick={handleSignInDialog}>
+              Sign In
+            </Button>
+            <Dialog open={signInDialogOpen}
+              TransitionComponent={FadeAnimation}
+              keepMounted
+              onClose={closeSignInDialog}
+              PaperProps={ { sx: { borderRadius: '20px' }} } 
+            >
+              <DialogTitle>{"Are you sure you want to sign in?"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  Please confirm that you have entered all your details before proceeding
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={closeSignInDialog}>No</Button>
+                <Button onClick={closeSignInDialog}>Yes</Button>
+              </DialogActions>
+            </Dialog>
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Box>
+      {/* <AppBar position='sticky'>
+        <Container maxWidth='xl' className='navbar'>
+          <Toolbar disableGutters>
+            <Box className='signInButton'>
+                <Button startIcon={<ExitToAppRounded />} size='large' style={{ color: 'black' }} onClick={handleSignInDialog}>
+                  Sign In
+                </Button>
+                <Dialog open={signInDialogOpen}
+                  TransitionComponent={FadeAnimation}
+                  keepMounted
+                  onClose={closeSignInDialog}
+                >
+                  <DialogTitle>{"Are you sure you want to sign in?"}</DialogTitle>
+                  <DialogContent>
+                    <DialogContentText>
+                      Please confirm that you have entered all your details before proceeding
+                    </DialogContentText>
+                  </DialogContent>
+                  <DialogActions>
+                    <Button onClick={closeSignInDialog}>No</Button>
+                    <Button onClick={closeSignInDialog}>Yes</Button>
+                  </DialogActions>
+                </Dialog>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar> */}
+    </div>
+  );
+}
+
+export default App;

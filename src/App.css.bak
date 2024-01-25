@@ -1,0 +1,41 @@
+body {
+  background-image: url('bgimage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: black solid 1px;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signInButton {
+  background-color: black;
+  border: rgba(250, 124, 72, 1) solid 5px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgba(255,255,255,0);
+  border-bottom: black solid 3px;
+}
+
+.navlink {
+  text-align: center;
+  background-color: black;
+  border-radius: 30px;
+  padding: 15px;
+  float: right;
+}
+
+.navlink:hover {
+  text-decoration: none;;
+}
+
+.activeNavLink {
+  text-align: center;
+  background-color: rgba(250, 124, 72, 1);
+  border-radius: 30px;
+  padding: 15px;
+  float: right;
+}
