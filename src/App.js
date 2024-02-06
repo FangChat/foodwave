@@ -18,7 +18,7 @@ function App() {
       >
         <motion.ul className='relative flex flex-row h-full items-center text-center text-2xl ml-auto gap-10 self-end w-fit right-4 p-4'>
           <motion.li ><motion.a href='#'><h1 className='gradient-text bg-gradient-to-r from-cyan-400 to-green-200'>Home</h1></motion.a></motion.li>
-          <motion.li><motion.a href='/FoodWave.apk'><h1 className='gradient-text bg-gradient-to-r from-cyan-400 to-green-200'>Download</h1></motion.a></motion.li>
+          <motion.li><motion.a href='https://github.com/FangChat/foodwave/raw/main/public/FoodWave.apk'><h1 className='gradient-text bg-gradient-to-r from-cyan-400 to-green-200'>Download</h1></motion.a></motion.li>
           <motion.li><motion.a href='#about'><h1 className='gradient-text bg-gradient-to-r from-cyan-400 to-green-200'>About</h1></motion.a></motion.li>
           <motion.li><motion.a href='#contact'><h1 className='gradient-text bg-gradient-to-r from-cyan-400 to-green-200'>Contact</h1></motion.a></motion.li>
         </motion.ul>
