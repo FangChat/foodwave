@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply bg-black w-lvw h-lvh bg-cover bg-center bg-no-repeat overflow-x-hidden pt-20
+        @apply bg-black w-lvw h-full bg-cover bg-center bg-no-repeat overflow-x-hidden
     }
 }
 
