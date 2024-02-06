@@ -10,6 +10,7 @@ function App() {
           animate={{
             opacity: [0, 1],
             boxShadow: "2px 2px 40px rgba(255, 255, 255, 0.48), -2px -2px 40px rgba(255, 255, 255, 0.48)",
+            backgroundColor: "rgba(0, 0, 0, 1)",
           }}
           transition={{
             delay: 0.5,
@@ -34,7 +35,7 @@ function App() {
             duration: 1,
           }}
         >
-          <motion.h1 id='home' className='text-4xl text-center text-white mt-5 mx-auto underline underline-offset-8 decoration-2'>
+          <motion.h1 id='home' className='text-4xl text-center text-white mx-auto underline underline-offset-8 decoration-2 mt-12'>
             Home
           </motion.h1>
 
@@ -42,7 +43,7 @@ function App() {
             Foodwave is a location-based unused food donation application that is designed to connect donor entities with recipient entities to utilize unused food to minimize food wastage while feeding the needy.With Foodwave, users can easily identify food donation opportunities in their area and make donations with just a few taps.
           </motion.p>
 
-          <motion.h1 id='about' className='text-4xl text-center text-white mx-auto underline underline-offset-8 decoration-2 mt-10'>
+          <motion.h1 id='about' className='text-4xl text-center text-white mx-auto underline underline-offset-8 decoration-2 mt-10 scroll-m-20'>
             About
           </motion.h1>
 
